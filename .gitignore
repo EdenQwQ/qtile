@@ -1,0 +1,4 @@
+.git/
+.vim/
+__pycache__/
+Session.vim
