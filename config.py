@@ -19,13 +19,18 @@ Q:::::::QQ::::::::Q      t::::::tttt:::::ti::::::il::::::le::::::::e
               QQQQQQ
 '''
 
-from libqtile import hook, qtile
+from libqtile import hook
 import os, subprocess
-from widgets import screens, widget_defaults
-from keys import keys
-from workspaces import groups
-from layouts import layouts, floating_layout
-from mouse import mouse
+import widgets, keys, workspaces, layouts, mouse
+
+# Load
+widget_defaults = widgets.widget_defaults
+screens = widgets.screens
+keys = keys.keys
+groups = workspaces.groups
+floating_layout = layouts.floating_layout
+layouts = layouts.layouts
+mouse = mouse.mouse
 
 # Misc
 dgroups_key_binder = None
