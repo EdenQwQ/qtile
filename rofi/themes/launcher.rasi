@@ -27,7 +27,7 @@ configuration {
 }
 
 window {
-    border: 						0px;
+    border: 						4px;
     border-color: 					@selected;
     border-radius: 					0;
     width: 							1200px;

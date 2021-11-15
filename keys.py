@@ -1,5 +1,4 @@
 from libqtile.command import lazy
-from libqtile import layout
 from libqtile.config import Key, KeyChord
 from settings import default_apps
 from function import Functions
@@ -74,8 +73,6 @@ keys = [
     Key(mod2, 'w', lazy.spawn(mybrowser)),
 
     # System hotkeys
-    # Key([mod0, 'shift', 'control'], 'F11', lazy.spawn('sudo hibernate-reboot')),
-    # Key([mod0, 'shift', 'control'], 'F12', lazy.spawn('systemctl hibernate')),
     Key([], 'Print', lazy.spawn("scrot -e 'mv $f /home/user/screenshots/'")),
 
     # Media hotkeys
@@ -87,10 +84,7 @@ keys = [
 
     # Rofi
     Key(mod0, 'p', lazy.spawn('.config/qtile/rofi/bin/launcher')),
-    # Key(mod0, 'm',lazy.spawn('.config/qtile/rofi/bin/mpd')),
-    # Key(mod0, 'n',lazy.spawn('.config/qtile/rofi/bin/network_menu')),
     Key(mod0, 's',lazy.spawn('.config/qtile/rofi/bin/screenshot')),
     Key(mod0, 'w',lazy.spawn('.config/qtile/rofi/bin/windows')),
     Key(mod0, 'x',lazy.spawn('.config/qtile/rofi/bin/powermenu')),
-
 ]

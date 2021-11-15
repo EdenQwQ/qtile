@@ -1,8 +1,5 @@
 from libqtile import bar, widget
-from libqtile.command import lazy
 from libqtile.config import Screen
-import os, subprocess, inspect
-from mpd import MPDClient
 from workspaces import get_workspace_groups, wsp
 from function import colors
 from settings import decor, colored, margin, reverse, font, mywidgets, opacity, size, decor_size

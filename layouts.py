@@ -5,8 +5,8 @@ from settings import margin
 
 # Default layout values
 layouts_default = dict(
-        border_normal = colors[0],
-        border_focus = colors[5],
+        border_normal = colors[4],
+        border_focus = colors[2],
         border_width = 6,
         margin = margin
 )
