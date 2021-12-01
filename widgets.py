@@ -3,6 +3,7 @@ from libqtile.config import Screen
 from workspaces import get_workspace_groups, wsp
 from function import colors
 from settings import decor, colored, margin, reverse, font, mywidgets, opacity, size, decor_size
+import iwlib
 
 widget_defaults = dict(
         font = font,
@@ -80,18 +81,18 @@ wlan_icon = widget.TextBox(
         background = colors[7] if colored == 'full' or colored == 'compact' and 'wlan_icon' in reverse else colors[0],
         )
 
-# wlan = widget.Wlan(
-#         format = '{essid}',
-#         foreground = colors[0] if colored == 'full' or colored == 'compact' and 'wlan' in reverse else colors[7],
-#         background = colors[7] if colored == 'full' or colored == 'compact' and 'wlan' in reverse else colors[0],
-#         )
+wlan = widget.Wlan(
+        format = '{essid}',
+        foreground = colors[0] if colored == 'full' or colored == 'compact' and 'wlan' in reverse else colors[7],
+        background = colors[7] if colored == 'full' or colored == 'compact' and 'wlan' in reverse else colors[0],
+        )
 
-# net = widget.Net(
-#         interface = 'wlan0',
-#         format = '{down} ↓↑{up} ',
-#         foreground = colors[0] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[7],
-#         background = colors[7] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[0],
-#         )
+net = widget.Net(
+        interface = 'wlan0',
+        format = '{down} ↓↑{up} ',
+        foreground = colors[0] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[7],
+        background = colors[7] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[0],
+        )
 
 clock = widget.Clock(
         format = '%a %b %d, %H:%M',
@@ -110,29 +111,29 @@ currentlayout = widget.CurrentLayout(
         foreground = colors[0] if colored == 'full' or colored == 'compact' and 'currentlayout' in reverse else colors[7],
         background = colors[7] if colored == 'full' or colored == 'compact' and 'currentlayout' in reverse else colors[0],
         )
-# net_fold = widget.WidgetBox(
-#         widgets = [
-#                 widget.Net(
-#                         interface = 'wlan0',
-#                         format = '{down} ↓↑{up} ',
-#                         foreground = colors[0] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[7],
-#                         background = colors[7] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[0],
-#                 )
-#         ],
-#         foreground = colors[0] if colored == 'full' or colored == 'compact' and 'net_fold' in reverse else colors[7],
-#         background = colors[7] if colored == 'full' or colored == 'compact' and 'net_fold' in reverse else colors[0],
-#         text_closed = ' [<] ',
-#         text_open = ' [>] '
-# )
-# weather = widget.Wttr(
-#         location={
-#                 'Ningbo': 'Ningbo',
-#         },
-#         format = '%l %c %t %m',
-#         padding = 20,
-#         foreground = colors[0] if colored == 'full' or colored == 'compact' and 'weather' in reverse else colors[7],
-#         background = colors[7] if colored == 'full' or colored == 'compact' and 'weather' in reverse else colors[0],
-# )
+net_fold = widget.WidgetBox(
+        widgets = [
+                widget.Net(
+                        interface = 'wlan0',
+                        format = '{down} ↓↑{up} ',
+                        foreground = colors[0] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[7],
+                        background = colors[7] if colored == 'full' or colored == 'compact' and 'net' in reverse else colors[0],
+                )
+        ],
+        foreground = colors[0] if colored == 'full' or colored == 'compact' and 'net_fold' in reverse else colors[7],
+        background = colors[7] if colored == 'full' or colored == 'compact' and 'net_fold' in reverse else colors[0],
+        text_closed = ' [<] ',
+        text_open = ' [>] '
+)
+weather = widget.Wttr(
+        location={
+                'Ningbo': 'Ningbo',
+        },
+        format = '%l %c %t %m',
+        padding = 20,
+        foreground = colors[0] if colored == 'full' or colored == 'compact' and 'weather' in reverse else colors[7],
+        background = colors[7] if colored == 'full' or colored == 'compact' and 'weather' in reverse else colors[0],
+)
 windowtabs = widget.WindowTabs(
         max_chars = 65,
         padding = 20,

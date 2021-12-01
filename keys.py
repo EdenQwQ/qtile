@@ -84,7 +84,13 @@ keys = [
 
     # Rofi
     Key(mod0, 'p', lazy.spawn('.config/qtile/rofi/bin/launcher')),
-    Key(mod0, 's',lazy.spawn('.config/qtile/rofi/bin/screenshot')),
-    Key(mod0, 'w',lazy.spawn('.config/qtile/rofi/bin/windows')),
-    Key(mod0, 'x',lazy.spawn('.config/qtile/rofi/bin/powermenu')),
+    Key(mod0, 's', lazy.spawn('.config/qtile/rofi/bin/screenshot')),
+    Key(mod0, 'w', lazy.spawn('.config/qtile/rofi/bin/windows')),
+    Key(mod0, 'x', lazy.spawn('.config/qtile/rofi/bin/powermenu')),
+
+    # Dmenu
+    Key(mod3, 'd', lazy.spawn('scripts/dmenu/scripts/dmenu_run.sh')),
+    Key(mod3, 'v', lazy.spawn('scripts/dmenu/scripts/dmenu_vim.sh')),
+    Key(mod3, 'm', lazy.spawn('scripts/dmenu/scripts/dmenu_man.sh')),
+    Key(mod3, 's', lazy.spawn('scripts/dmenu/scripts/dmenu_search.sh')),
 ]
