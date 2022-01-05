@@ -23,4 +23,6 @@ xrdb .Xresources
 
 xinput set-prop "SYNA1D31:00 06CB:CD48 Touchpad" "Synaptics Tap Action" 0, 0, 0, 0, 1, 3, 2 &
 
+sxhkd &
+
 startup &

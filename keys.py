@@ -72,25 +72,10 @@ keys = [
     Key(mod2, 'f', lazy.spawn(myfm)),
     Key(mod2, 'w', lazy.spawn(mybrowser)),
 
-    # System hotkeys
-    Key([], 'Print', lazy.spawn("scrot -e 'mv $f /home/user/screenshots/'")),
-
-    # Media hotkeys
-    Key([], 'XF86AudioRaiseVolume', lazy.spawn('amixer -q set Master 5%+')),
-    Key([], 'XF86AudioLowerVolume', lazy.spawn('amixer -q set Master 5%-')),
-    Key([], 'XF86AudioMute', lazy.spawn('amixer -q set Master toggle')),
-    Key([], 'XF86MonBrightnessUp', lazy.spawn('xbacklight -inc 10')),
-    Key([], 'XF86MonBrightnessDown', lazy.spawn('xbacklight -dec 10')),
-
     # Rofi
     Key(mod0, 'p', lazy.spawn('.config/qtile/rofi/bin/launcher')),
     Key(mod0, 's', lazy.spawn('.config/qtile/rofi/bin/screenshot')),
     Key(mod0, 'w', lazy.spawn('.config/qtile/rofi/bin/windows')),
     Key(mod0, 'x', lazy.spawn('.config/qtile/rofi/bin/powermenu')),
 
-    # Dmenu
-    Key(mod3, 'd', lazy.spawn('scripts/dmenu/scripts/dmenu_run.sh')),
-    Key(mod3, 'v', lazy.spawn('scripts/dmenu/scripts/dmenu_vim.sh')),
-    Key(mod3, 'm', lazy.spawn('scripts/dmenu/scripts/dmenu_man.sh')),
-    Key(mod3, 's', lazy.spawn('scripts/dmenu/scripts/dmenu_search.sh')),
 ]

@@ -4,7 +4,7 @@
 >_Note: This is my first rice. Please excuse my poor coding style and poor
 English._
 Based on the official example config  
-Using [void linux](https://voidlinux.org) with glibc and runnit
+Using [void linux](https://voidlinux.org) with musl and runnit
 
 ### Dependences
 * [qtile](http://www.qtile.org)
@@ -36,7 +36,3 @@ cp -r ~/qtile ~/.config/
 
 3. Make sure you've checked the keybindings in keys.py, widgets in widgets.py,
    settings in settings.py.
-
-### Etc
-
-To generate pywal colorscheme, set your wallpaper with nitrogen and run <code>~/.config/qtile/pywal.sh</code>

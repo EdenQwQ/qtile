@@ -2,7 +2,7 @@ from libqtile import bar, widget
 from libqtile.config import Screen
 from workspaces import get_workspace_groups, wsp
 from function import colors
-from settings import decor, colored, margin, reverse, font, mywidgets, opacity, size, decor_size
+from settings import decor, colored, margin, reverse, font, mywidgets, opacity, size, decor_size, position, border_width
 import iwlib
 
 widget_defaults = dict(
@@ -146,15 +146,31 @@ widgets = []
 for wid in mywidgets:
         widgets.append(eval(wid))
 
-screens = [
-        Screen(
-                top = bar.Bar(
+screen = Screen(
+        top = bar.Bar(
+                widgets,
+                size = size,
+                background = colors[0],
+                opacity = opacity,
+                border_width = border_width,
+                margin = [margin,margin,0,margin],
+                border_color = colors[7]
+        ),
+)
+
+if position == "bottom" :
+        screen = Screen(
+                bottom = bar.Bar(
                         widgets,
                         size = size,
                         background = colors[0],
                         opacity = opacity,
-                        margin = [margin,margin,0,margin]
+                        border_width = border_width,
+                        margin = [0,margin,margin,margin],
+                        border_color = colors[7]
                 ),
         )
+screens = [
+        screen
 ]
 
