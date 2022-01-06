@@ -1,15 +1,23 @@
 import os
 from libqtile.command import lazy
+from settings import theme
 
-# load pywal colors
+# load colors
 colors = []
-cache = os.path.expanduser('~')+'/.cache/wal/colors'
+
 def load_colors(cache):
     with open(cache, 'r') as file:
         for i in range(16):
             colors.append(file.readline().strip())
     colors.append('#ffffff')
+
+if theme == "pywal":
+    cache = os.path.expanduser('~')+'/.cache/wal/colors'
+else:
+    cache = os.path.expanduser('~')+'/.config/qtile/themes/'+theme
+
 load_colors(cache)
+
 
 class Functions:
     @staticmethod

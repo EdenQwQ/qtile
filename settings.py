@@ -1,14 +1,16 @@
 # Global margin for windows and the bar
 margin = 40
 
+##################
 ## BAR SETTINGS ##
+##################
 
 # bottom or top
 position = "top"
 
 size = 100
 opacity = 0.6
-border_width = [6, 6, 6, 6]
+border_width = [0, 0, 0, 0]
 
 # Determine the bar color style. Choose from 'none', 'full', 'compact'
 colored = 'compact'
@@ -30,6 +32,10 @@ font = 'FantasqueSansMono Nerd Font Regular'
 # font = 'DMMono Nerd Font'
 # font = 'Noto Sans Sc Bold'
 
+##################
+
+# Currently available: nord, gruvbox, pywal
+theme = "gruvbox"
 
 default_apps = {
   'browser' : 'firefox',
