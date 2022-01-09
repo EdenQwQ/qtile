@@ -71,11 +71,4 @@ keys = [
     # Apps hotkeys
     Key(mod2, 'f', lazy.spawn(myfm)),
     Key(mod2, 'w', lazy.spawn(mybrowser)),
-
-    # Rofi
-    Key(mod0, 'p', lazy.spawn('.config/qtile/rofi/bin/launcher')),
-    Key(mod0, 's', lazy.spawn('.config/qtile/rofi/bin/screenshot')),
-    Key(mod0, 'w', lazy.spawn('.config/qtile/rofi/bin/windows')),
-    Key(mod0, 'x', lazy.spawn('.config/qtile/rofi/bin/powermenu')),
-
 ]
